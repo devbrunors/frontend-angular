@@ -1,0 +1,9 @@
+<div class="container-page">
+
+    <h1 class="titulo">Pessoas que vão ganhar dinheiro</h1>
+
+    <div *ngFor="let pessoa of simpleRequestPessoas">
+        <app-card nome="{{pessoa.employee_name}}" id="{{pessoa.id}}"></app-card>
+    </div>
+    
+</div>

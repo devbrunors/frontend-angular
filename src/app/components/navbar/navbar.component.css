@@ -1,0 +1,98 @@
+.logo{
+    position: absolute;
+    width: 183px;
+    height: 84px;
+    left: 22px;
+    top: 29px;
+    background: #FFFFFF;
+    opacity: 0.6;
+    border-radius: 34px;
+}
+
+.nome-logo{
+    position: absolute;
+    width: 136.33px;
+    height: 36.47px;
+    left: 26.67px;
+    top: 22.76px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28.3666px;
+    line-height: 36px;
+    text-align: center;
+    color: #059D42;
+}
+
+.menu-lateral{
+    display: grid;
+    position: absolute;
+    top: 150px;
+    left: 22px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFF;
+}
+
+.menu-lateral span{
+    margin-bottom: 8px;
+}
+
+.submenu{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 23px;
+    margin-bottom: 11px;
+    color: #93FFE8;
+}
+
+.navbar-topo {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+    .navbar-lateral {
+        display: none;
+    }
+    .navbar-topo {
+        display: flex;
+    }
+
+    .menu-topo{
+        position: relative;
+        top: 18px;
+        left: 22px;
+    }
+
+    .logo{
+        position: relative;
+        width: 93px;
+        height: 42.69px;
+        margin: 0px auto;
+        top: 8px;
+        left: 0px;
+        background: #FFFFFF;
+        opacity: 0.6;
+        border-radius: 17.2787px;
+        display: flex;
+    }
+    
+    .nome-logo{
+        position: initial;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 15px;
+        line-height: 17px;
+        text-align: center;
+        padding: 14px;
+        color: #059D42;
+    }
+}

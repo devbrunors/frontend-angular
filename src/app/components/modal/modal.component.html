@@ -1,0 +1,24 @@
+<div [style.display]="isOpen?'block':'none'" class="modal-complete">
+    <div [ngClass]="['modal-complete-content'].concat('middle')" 
+    [@fadeIn]="animationOpen2 ? 'open' : 'close'"
+    [@fadeOut]="!animationOpen2 ? 'close' : 'open'">
+  
+      <div class="modal-complete-body">
+        <div class="modal-complete-close">
+            <span class="header">Quantos reais adicionar para {{nome}}?</span>
+            <span class="close" (click)="close()">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 2L12 12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+        </div>
+        <div class="modal-complete-content">
+            <ng-content></ng-content>
+        </div>
+      </div>
+  
+    </div>
+  
+  </div>
+  

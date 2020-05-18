@@ -1,0 +1,216 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    transition: 0.3s;
+    width: 80%;
+    margin: 50px auto;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .texto {
+    color: #059D42;
+    margin-bottom: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140.62%;
+  }
+
+  .icone {
+    width: 42px;
+    margin: 0px auto;
+    fill: #059D42;
+  }
+
+  .botao {
+    color: #059D42;
+    margin-bottom: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+  }
+
+  .barra {
+    display: grid;
+  }
+
+  .container-left {
+    width: 90px;
+  }
+
+  .container-right {
+    width: calc(100% - 90px);
+    padding-right: 25px;
+    display: grid;
+  }
+  
+  .saldo {
+    display: inline;
+    top: -14px;
+    right: -26px;
+    position: relative;
+  }
+
+  .saldo-info {
+    width: 267px;
+    height: 38px;
+    float: right;
+    display: -webkit-box;
+    color: white;
+  }
+
+  .saldo-texto {
+    margin-left: 5px;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  
+  .saldo-icone {
+    padding: 6px 0;
+    width: 24px;
+    fill: white;
+  }
+
+  .saldo-container {
+      margin: auto;
+      display: -webkit-box;
+  }
+
+  .saldo-red {
+    background-color: #E14646;
+  }
+
+  .saldo-green {
+    background-color: #059D42;
+    position: relative;
+    right: 10px;
+  }
+
+
+  .container {
+    display: -webkit-box;
+    width: 100%;
+    top: -10px;
+    position: relative;
+    padding-left: 0px;
+  }
+
+  .botoes-add-saldo {
+    display: flex;
+    padding: 34px 78px;
+    width: 100%;
+  }
+
+  .botoes-esquerda{
+    width: 50%;
+  }
+
+  .botoes-direita{
+    width: 50%;
+  }
+
+  .botoes-saldo{
+    width: 90%;
+    height: 96px;
+    background-color: #D4E4DB;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28.3666px;
+    line-height: 36px;
+    text-align: center;
+    color: #059D42;
+    margin: 10px;
+    outline: 0;
+  }
+  
+
+  .bar{
+    color: black;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 10px;
+    height: 16px;
+    padding: 3px;
+    background-color: #E9E9E9;
+    border-radius: 50px;
+    width: 100%;
+    display: flex;
+  }
+
+  .bar::before{
+    content: "Total R$ 200,00";
+    text-align: right;
+    background-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    position: absolute;
+    right: 20px;
+    top: 28px;
+    color: #778489;
+  }
+
+  .limite {
+    position: absolute;
+    top: 34px;
+    right: 45px;
+    color: rgba(99, 102, 106, 0.3);
+    font-size: 21px;
+    font-family: Roboto;
+    font-style: normal;
+  }
+  
+  .progress-bar::before{
+    content: "";
+    width: 0%;
+    text-align: right;
+    background-color: transparent;
+    padding: 0px 8px;
+  }
+
+  .progress-bar{
+    top: -16px;
+    height: 16px;
+    width: 0%;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 10px;
+    text-align: right;
+    border-radius: 50px;
+    background-color: #059D42;
+    position: relative;
+  }
+
+  .botao-adicionar-saldo {
+    outline: 0;
+    border: none;
+    background: none;
+  }
+
+
+  @media (max-width: 600px) {
+    .container-left {
+        display: none;
+    }
+    .container-right {
+        width: 100%;
+    }
+    .container {
+        padding-left: 15px;
+    }
+    .botoes-add-saldo {
+        padding: 34px 10px;
+    }
+    .botoes-saldo{
+        height: 150px;
+    }
+  }
+

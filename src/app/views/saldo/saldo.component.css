@@ -1,0 +1,15 @@
+.titulo {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28.3666px;
+    line-height: 33px;
+    color: rgba(0, 0, 0, 0.7);
+    width: 80%;
+    margin: 50px auto;
+}
+.container-page { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-color: #E5E5E5;
+}

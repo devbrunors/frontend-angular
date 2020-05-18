@@ -1,0 +1,72 @@
+
+
+<div id="card-{{id}}" class="card">
+    <div class="saldo">
+        <div class="saldo-info saldo-red" *ngIf="!mostrarSaldoAdicionado">
+            <div class="saldo-container">
+                <div class="saldo-icone">
+                    <icon-money></icon-money>
+                </div>
+                <div class="saldo-texto">
+                    <span class="texto-saldo"> Você não adicionou nada</span>
+                </div>
+            </div>
+        </div>
+        <div class="saldo-info saldo-green" *ngIf="mostrarSaldoAdicionado">
+            <div class="saldo-container">
+                <div class="saldo-icone">
+                    <icon-money></icon-money>
+                </div>
+                <div class="saldo-texto">
+                    <span class="texto-saldo"> Você já adicionou R$ {{this.valorSaldo}},00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-left">
+            <div class="icone">
+                <icon-money></icon-money>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="texto">
+                {{ nome }}
+            </div>
+            <div class="barra">
+                <div id="bar" class="bar">
+                    <span *ngIf="!mostrarSaldoAdicionado">R$ 0,00</span>
+                    <span class="limite">|</span>
+                </div>
+                <div id="progress-bar-{{ id }}" class="progress-bar">
+                    <span *ngIf="mostrarSaldoAdicionado">R$ {{this.valorSaldo}},00</span>
+                </div>
+                <form [formGroup]="form">
+                    <input type="number" formControlName="saldo" #saldo hidden/>
+                </form>
+            </div>
+            <div class="botao">
+                <span style="margin-top: 4px;">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.67742 0.822581C7.67742 0.368282 8.0457 0 8.5 0C8.9543 0 9.32258 0.368282 9.32258 0.822581V16.1774C9.32258 16.6317 8.9543 17 8.5 17C8.0457 17 7.67742 16.6317 7.67742 16.1774V0.822581Z" fill="#059D42"/>
+                        <path d="M0.822581 9.32258C0.368282 9.32258 1.9858e-08 8.9543 0 8.5C-1.9858e-08 8.0457 0.368282 7.67742 0.822581 7.67742L16.1774 7.67742C16.6317 7.67742 17 8.0457 17 8.5C17 8.9543 16.6317 9.32258 16.1774 9.32258L0.822581 9.32258Z" fill="#059D42"/>
+                    </svg>
+                </span>
+                <button class="botao-adicionar-saldo" (click)="novoSaldo()">Clique aqui para adicionar reais</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-modal #modalSaldo nome="{{ nome }}">
+    <div class="botoes-add-saldo">
+        <div class="botoes-esquerda">
+            <div><button class="botoes-saldo" (click)="adicionarSaldo(25)">R$ 25</button></div>
+            <div><button class="botoes-saldo" (click)="adicionarSaldo(75)">R$ 75</button></div>
+        </div>
+        <div class="botoes-direita">
+            <div><button class="botoes-saldo" (click)="adicionarSaldo(50)">R$ 50</button></div>
+            <div><button class="botoes-saldo" (click)="adicionarSaldo(125)">R$ 125</button></div>
+        </div>
+    </div>
+</app-modal>
